@@ -25,8 +25,14 @@ fn main() {
     std::io::stdin().read_line(&mut favorite_number).unwrap();
     
     // adding trim to drop the line break and parser to change to a number 
-    let favorite_number_int : u8 = favorite_number.trim().parse().unwrap();
+    let favorite_number_int : u16 = favorite_number.trim().parse().unwrap();
 
+    // Condition
+    if favorite_number_int >= 18 {
+        println!("Your number big");
+    } else {
+        println!("Your number is small");
+    }
 
     println!("Welcome {}, your number is: {}", last_name, favorite_number_int);
 
