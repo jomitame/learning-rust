@@ -12,4 +12,11 @@ fn main() {
     let name: &str = "Jose"; 
 
     println!("Hi i am {} and i'm {} years old, my weigth is: {} pounds", name, age, weight);
+
+    // getting info fron keyborad user
+    println!("Please what is your last name: ");
+    let mut last_name : String = String::new();
+    std::io::stdin().read_line(&mut last_name).unwrap();
+    println!("Welcome {}", last_name);
+
 }
