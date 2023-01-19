@@ -20,23 +20,30 @@ fn main() {
     // adding trim to drop the line break
     last_name = last_name.trim().to_string();
 
-    println!("Please what is your favorite number: ");
-    let mut favorite_number : String = String::new();
-    std::io::stdin().read_line(&mut favorite_number).unwrap();
-    
-    // adding trim to drop the line break and parser to change to a number 
-    let favorite_number_int : u16 = favorite_number.trim().parse().unwrap();
+    // loop
+    // be carefull with the scope of loop vaiables
 
-    // Condition
-    if favorite_number_int >= 18 {
-        println!("Your number big");
-    } 
-    else if favorite_number_int == 0{
-        println!("Your number is zero");
-    }else {
-        println!("Your number is small");
+    loop {
+
+        println!("Please what is your favorite number: ");
+        let mut favorite_number : String = String::new();
+        std::io::stdin().read_line(&mut favorite_number).unwrap();
+        
+        // adding trim to drop the line break and parser to change to a number 
+        let favorite_number_int : u16 = favorite_number.trim().parse().unwrap();
+
+        // Condition
+        if favorite_number_int >= 18 {
+            println!("Your number big");
+        } 
+        else if favorite_number_int == 0{
+            println!("Your number is zero");
+        }else {
+            println!("Your number is small");
+            break;
+        }
     }
 
-    println!("Welcome {}, your number is: {}", last_name, favorite_number_int);
+    println!("Welcome {}", last_name);
 
 }
