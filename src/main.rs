@@ -30,7 +30,10 @@ fn main() {
     // Condition
     if favorite_number_int >= 18 {
         println!("Your number big");
-    } else {
+    } 
+    else if favorite_number_int == 0{
+        println!("Your number is zero");
+    }else {
         println!("Your number is small");
     }
 
