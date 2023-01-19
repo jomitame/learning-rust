@@ -17,6 +17,17 @@ fn main() {
     println!("Please what is your last name: ");
     let mut last_name : String = String::new();
     std::io::stdin().read_line(&mut last_name).unwrap();
-    println!("Welcome {}", last_name);
+    // adding trim to drop the line break
+    last_name = last_name.trim().to_string();
+
+    println!("Please what is your favorite number: ");
+    let mut favorite_number : String = String::new();
+    std::io::stdin().read_line(&mut favorite_number).unwrap();
+    
+    // adding trim to drop the line break and parser to change to a number 
+    let favorite_number_int : u8 = favorite_number.trim().parse().unwrap();
+
+
+    println!("Welcome {}, your number is: {}", last_name, favorite_number_int);
 
 }
