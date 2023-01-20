@@ -1,3 +1,8 @@
+fn plus_one(number:i32) -> i32 {
+    let result: i32 = number + 1;
+    return result;
+}
+
 fn main() {
 
     // this is how you declare a variable wher "u" is for positive number (unsigned) and  8 is the quantity of bytes
@@ -61,5 +66,9 @@ fn main() {
         names.push(the_name);
     }
     println!("{:?}", names);
+
+    // call function
+    let the_number = plus_one(5);
+    println!("{}", the_number);
 
 }
