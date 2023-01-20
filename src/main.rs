@@ -46,4 +46,20 @@ fn main() {
 
     println!("Welcome {}", last_name);
 
+    // Vectors
+    // You can access to position vector[index]
+
+    let mut names: Vec<String> = Vec::new();
+
+    // for loop
+
+    for _i in 0..3 {
+        println!("Please what is your name: ");
+        let mut the_name : String = String::new();
+        std::io::stdin().read_line(&mut the_name).unwrap();
+
+        names.push(the_name);
+    }
+    println!("{:?}", names);
+
 }
